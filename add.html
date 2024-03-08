@@ -20,18 +20,54 @@
                 <label for="ten" class="form-label">Ten:</label>
                 <input type="text" class="form-control" name="ten">
             </div>
+            <!-- select -->
             <div class="mb-3">
                 <label for="hang" class="form-label">Hang:</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" multiple aria-label="Default select example">
                     <option value="1">Samsung</option>
                     <option value="2">Apple</option>
                     <option value="3">Oppo</option>
                 </select>
             </div>
+            <!-- checkbox -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Default checkbox
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Checked checkbox
+                </label>
+            </div>
+            <!-- radio -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Default checked radio
+                </label>
+            </div>
+            <!-- Switch -->
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+            </div>
             <div class="mb-3">
                 <label for="gia" class="form-label">Gia:</label>
                 <input type="number" class="form-control" name="gia">
+                <!-- range -->
+                <label for="customRange1" class="form-label">Example range</label>
+                <input type="range" class="form-range" min="1" max="5" step="0.5" id="customRange1">
             </div>
+
             <div class="text-center">
                 <button class="btn btn-success">Them</button>
             </div>
