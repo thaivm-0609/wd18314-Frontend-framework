@@ -48,66 +48,47 @@
     </nav>
       
     <div class="container mt-5">
-        <h1 class="text-center text-uppercase">Danh sách sản phẩm</h1>
-        <button class="btn btn-success float-end">Thêm</button>
-        <table class="table table-borderless table-hover table-striped-columns">
-            <thead class="table-primary">
-                <tr>
-                    <th>ID</th>
-                    <th>Tên</th>
-                    <th>Hãng</th>
-                    <th>Giá</th>
-                    <th>Thao tác</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>S22 Ultra</td>
-                    <td>Samsung</td>
-                    <td>30000000</td>
-                    <td>
-                        <button class="btn btn-primary">Chi tiết</button>
-                        <button class="btn btn-warning">Sửa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>S22 Ultra</td>
-                    <td>Samsung</td>
-                    <td>30000000</td>
-                    <td>
-                        <button class="btn btn-primary">Chi tiết</button>
-                        <button class="btn btn-warning">Sửa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>S22 Ultra</td>
-                    <td>Samsung</td>
-                    <td>30000000</td>
-                    <td>
-                        <button class="btn btn-primary">Chi tiết</button>
-                        <button class="btn btn-warning">Sửa</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>S22 Ultra</td>
-                    <td>Samsung</td>
-                    <td>30000000</td>
-                    <td>
-                        <button class="btn btn-primary">Chi tiết</button>
-                        <button class="btn btn-warning">Sửa</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#waiting" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            Chờ xác nhận
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#shipping" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+            Đang vận chuyển
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#complete" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+            Đã hoàn thành
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#cancel" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false">
+            Huỷ
+          </button>
+        </li>
+      </ul>
 
-    <div class="mt-5 p-4 bg-dark text-white text-center">
-        <p>Footer</p>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="waiting" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+          Chờ xác nhận
+        </div>
+        <div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          Đang vận chuyển
+        </div>
+        <div class="tab-pane fade" id="complete" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+          Đã hoàn thành
+        </div>
+        <div class="tab-pane fade" id="cancel" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+          Đơn hoàn
+        </div>
+      </div>
     </div>
       
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+      <p>Footer</p>
+    </div>
 </body>
 </html>
