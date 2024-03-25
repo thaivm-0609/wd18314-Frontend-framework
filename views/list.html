@@ -1,0 +1,20 @@
+<h1>Đây là trang danh sách</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr ng-repeat="p in products">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.price}}</td>
+        <td>
+            <button class="btn btn-success">Chi tiết</button>
+            <button class="btn btn-warning">Sửa</button>
+        </td>
+    </tr>
+</table>

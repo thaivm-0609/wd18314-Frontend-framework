@@ -12,22 +12,45 @@
 </head>
 <!-- ng-app: khai báo tên ứng dụng -->
 <body ng-app="wd18314">
-    <!-- ng-controller: khai báo tên controller -->
-    <form action="" class="container" ng-controller="myController">
-        <label for="" class="form-label">Name</label>
-        <input type="text" class="form-control" ng-model="name">
-        <!-- <h1>Hello {{ teacher.name }}</h1>
-        <h1>Hello {{ teacher['email'] }}</h1> -->
+    <div class="container" ng-controller="imgController">
+        <img src="{{path}}" alt="">
         <h1>Hello {{ listUser[0] }}</h1>
-        <h1>Hello {{ listUser[1] }}</h1>
-        <h1>Hello {{ listUser[2] }}</h1>
-    </form>
+        <!-- ng-controller: khai báo tên controller -->
+        <form action="" class="container" ng-controller="myController">
+            <label for="" class="form-label">Name</label>
+            <input type="text" class="form-control" ng-model="name">
+            <!-- <h1>Hello {{ teacher.name }}</h1>
+            <h1>Hello {{ teacher['email'] }}</h1> -->
+            <h1 ng-repeat="user in listUser">Hello {{ user }}</h1>
+            <!-- <img src="{{path}}" alt="">
+            <img src="{{ $parent.path}}" alt=""> -->
+            <p>{{count}}</p>
+            <button class="btn btn-primary" type="button" ng-click="upCount()">Bấm</button>
+            <!-- <p ng-if="count%2 == 0">Đây là số chẵn</p>
+            <p ng-show="count%2 != 0">Đây là số lẻ</p>
+            <p ng-hide="count%2 != 0">Đây là số chẵn</p> -->
+            <p>Status:</p>
+            <span ng-switch="count">
+                <p ng-switch-when="1">Hoạt động</p>
+                <p ng-switch-when="0">Không hoạt động</p>
+                <p ng-switch-default>mặc định</p>
+            </span>
+        </form>
+    </div>
+    
 
     <script>
         //khởi tạo angular module
         var app = angular.module('wd18314', []);
         //khai báo controller
         //C1: viết trực tiếp function
+        app.controller('imgController', function ($scope, $rootScope) {
+            $scope.path = './img/chicago.jpg';
+            $rootScope.count = 0;
+            $rootScope.upCount = function () {
+                $rootScope.count += 1;
+            }
+        });
         app.controller('myController', function ($scope) {
             // $scope.name = 'akdsjhfkádfhákdjfh'; //gán giá trị cho biến name
             //object

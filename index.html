@@ -12,8 +12,11 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="./angular-1.8.2/angular.min.js"></script>
+    <script src="./angular-1.8.2/angular-route.min.js"></script>
+    <script src="./controllers/ListController.js"></script>
 </head>
-<body>
+<body ng-app="wd18314">
     <div class="p-5 bg-primary text-white text-center">
         <h1>My First Bootstrap 5 Page</h1>
         <p>Resize this responsive page to see the effect!</p> 
@@ -26,12 +29,12 @@
                     <a class="nav-link active" href="#"><i class="bi bi-house-fill"></i> Homepage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="bi bi-unity"></i> Unity</a>
+                    <a class="nav-link" href="#!/list"><i class="bi bi-unity"></i>Danh sách</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#!/add">Thêm mới</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -43,123 +46,28 @@
                       <li><a class="dropdown-item" href="#"><i class="bi bi-apple"></i> Apple</a></li>
                       <li><a class="dropdown-item" href="#">Oppo</a></li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
       
     <div class="container mt-5">
-        <!-- Carousel -->
-        <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-          <!-- Indicators/dots -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
-          </div>
-
-          <!-- The slideshow/carousel -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./img/la.jpg" alt="Los Angeles" class="d-block w-100">
-              <div class="carousel-caption">
-                <p>LA</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/chicago.jpg" alt="Chicago" class="d-block w-100">
-              <div class="carousel-caption">
-                <p>Chicago</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/ny.jpg" alt="New York" class="d-block w-100">
-              <div class="carousel-caption">
-                <p>New york</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./img/294fb6e4-0a5d-4ff7-9a56-4aace3b60830.png" alt="New York" class="d-block w-100">
-              <div class="carousel-caption">
-                <p>ABC</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Left and right controls/icons -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-        <ul class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Photos</a></li>
-          <li class="breadcrumb-item"><a href="#">Summer 2017</a></li>
-          <li class="breadcrumb-item"><a href="#">Italy</a></li>
-          <li class="breadcrumb-item active">Rome</li>
-        </ul>
-        <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#test-collapse">Collapsible</button>
-
-        <div id="test-collapse" class="collapse">
-          Lorem ipsum dolor text....
-        </div>
-        <div class="row">
-          <div class="col">
-            <h2>About Me</h2>
-            <h5>Photo of me:</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            <h3 class="mt-4">Some Links</h3>
-            <p>Lorem ipsum dolor sit ame.</p>
-            <ul class="nav nav-pills flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Active</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
-              </li>
-            </ul>
-            <hr class="d-sm-none">
-          </div>
-          <div class="col">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2020</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      
-            <h2 class="mt-5">TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2020</h5>
-            <div class="fakeimg">Fake Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-          </div>
-        </div>
-
-        <!-- <div class="d-flex justify-content-center"> -->
-          <ul class="pagination justify-content-center">
-            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        <!-- </div> -->
+      <div ng-view></div>
     </div>
       
     <div class="mt-5 p-4 bg-dark text-white text-center">
       <p>Footer</p>
     </div>
-      
+    
+    <script>
+      angular.module('wd18314',['ngRoute']).config(function ($routeProvider) {
+        $routeProvider.when('/list', {
+          templateUrl: 'views/list.html',
+          controller: ListController,
+        }).when('/add', {
+          templateUrl: 'views/add.html',
+        })
+      })
+    </script>
 </body>
 </html>
