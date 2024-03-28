@@ -1,1 +1,24 @@
 <h1>Đây là trang thêm mới</h1>
+<form>
+    <div>
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" ng-model="inputValue.name">
+    </div>
+    <div>
+        <label for="" class="form-label">Description</label>
+        <input type="text" class="form-control" ng-model="inputValue.description">
+    </div>
+    <div>
+        <label for="" class="form-label">Price</label>
+        <input type="text" class="form-control" ng-model="inputValue.price">
+    </div>
+    <center>
+        <button 
+            type="button" 
+            class="btn btn-primary mt-2"
+            ng-click="onSubmit()"
+        >
+            Thêm
+        </button>
+    </center>
+</form>
