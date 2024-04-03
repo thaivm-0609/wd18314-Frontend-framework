@@ -75,6 +75,8 @@
         }).when('/edit/:id', {
           templateUrl: 'views/edit.html',
           controller: EditController,
+        }).otherwise({
+          templateUrl: 'views/404.html',
         })
       })
     </script>

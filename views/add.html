@@ -1,16 +1,52 @@
 <h1>Đây là trang thêm mới</h1>
-<form>
+<form name="addForm">
     <div>
         <label for="" class="form-label">Name</label>
-        <input type="text" class="form-control" ng-model="inputValue.name">
+        <input type="text" name="name" class="form-control" ng-model="inputValue.name" required minlength="3">
+        <p 
+            class="text-danger" 
+            ng-if="addForm.name.$dirty && addForm.name.$error.required"
+        >
+            Tên không được bỏ trống
+        </p>
+        <p 
+            class="text-danger" 
+            ng-if="addForm.name.$dirty && addForm.name.$error.minlength"
+        >
+            Tên không được ít hơn 3 ký tự
+        </p>
     </div>
     <div>
         <label for="" class="form-label">Description</label>
-        <input type="text" class="form-control" ng-model="inputValue.description">
+        <input type="text" name="description" class="form-control" ng-model="inputValue.description" required maxlength="99">
+        <p 
+            class="text-danger" 
+            ng-if="addForm.description.$dirty && addForm.description.$error.required"
+        >
+            Mô tả không được bỏ trống
+        </p>
+        <p 
+            class="text-danger" 
+            ng-if="addForm.description.$dirty && addForm.description.$error.maxlength"
+        >
+            Mô tả không được lớn hơn 99 ký tự
+        </p>
     </div>
     <div>
         <label for="" class="form-label">Price</label>
-        <input type="text" class="form-control" ng-model="inputValue.price">
+        <input type="number" name="price" class="form-control" ng-model="inputValue.price" required min="1">
+        <p 
+            class="text-danger" 
+            ng-if="addForm.price.$dirty && addForm.price.$error.required"
+        >
+            Giá không được bỏ trống
+        </p>
+        <p 
+            class="text-danger" 
+            ng-if="addForm.price.$dirty && addForm.price.$error.min"
+        >
+            Giá phải > 0 
+        </p>
     </div>
     <center>
         <button 
